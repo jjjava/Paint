@@ -33,6 +33,8 @@ public class CoreFrMain {
             originator.restoreFromMemento(state.get(k));
             HsCanvas.getInstance().setColor(originator.get().getColor());
             HsCanvas.getInstance().setBackBuffer(originator.get().getBackbuffer());
+            
+            System.err.println("entrou Z core");
         } else {
             k = 0;
         }
@@ -53,6 +55,7 @@ public class CoreFrMain {
     public void setColor() {
         paiterColor = JColorChooser.showDialog(null, "Choose Background Color", paiterColor);
         if (paiterColor != null) {
+            System.out.println("entrou set Core");
             HsCanvas.getInstance().setColor(paiterColor);
         }
     }

@@ -46,6 +46,7 @@ public class HsCanvas extends Canvas implements MouseMotionListener {
 
         repaint();
         me.consume();
+        CoreFrMain.getInstance().keep();
     }
 
     @Override
@@ -68,6 +69,7 @@ public class HsCanvas extends Canvas implements MouseMotionListener {
 
     public void setColor(Color color) {
         this.color = color;
+        this.setForeground(color);
     }
 
     public Image getBackBuffer() {
