@@ -11,6 +11,7 @@ import java.awt.event.MouseMotionListener;
 /**
  *
  * @author hudson schumaker
+ * @version 1.0.0
  */
 public class HsCanvas extends Canvas implements MouseMotionListener {
 
