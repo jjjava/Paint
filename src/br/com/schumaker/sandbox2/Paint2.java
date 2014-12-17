@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 
 /**
  *
- * @author hudson.sales
+ * @author hudson schumaker
  */
 public class Paint2 extends Canvas implements MouseMotionListener {
 
@@ -55,6 +55,5 @@ public class Paint2 extends Canvas implements MouseMotionListener {
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
-
     }
 }

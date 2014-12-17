@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.schumaker.sandbox;
 
 /**
  *
- * @author hudson.sales
+ * @author hudson schumaker
  */
 import java.awt.Graphics;
 
@@ -37,7 +32,6 @@ public class Paint extends Applet implements MouseMotionListener {
 //        backg.setColor(Color.white);
 //        backg.fillRect(0, 0, width, height);
 //        backg.setColor(Color.blue);
-
         addMouseMotionListener(this);
     }
 

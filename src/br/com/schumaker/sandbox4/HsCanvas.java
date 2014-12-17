@@ -1,4 +1,4 @@
-package br.com.schumaker.sandbox3;
+package br.com.schumaker.sandbox4;
 
 import java.awt.Canvas;
 import java.awt.Color;
@@ -15,7 +15,8 @@ import java.awt.event.MouseMotionListener;
 public class HsCanvas extends Canvas implements MouseMotionListener {
 
     private Graphics gfx;
-    Image backbuffer;
+    private Image backbuffer;
+    private Color color;
 
     public HsCanvas() {
         gfx = getGraphics();
@@ -33,7 +34,7 @@ public class HsCanvas extends Canvas implements MouseMotionListener {
         int x = me.getX();
         int y = me.getY();
         this.getGraphics().fillOval(x - 10, y - 10, 10, 10);
-        
+
         backbuffer = createImage(this.getWidth(), this.getHeight());
         gfx = backbuffer.getGraphics();
 
@@ -53,5 +54,13 @@ public class HsCanvas extends Canvas implements MouseMotionListener {
     @Override
     public void paint(Graphics g) {
         update(gfx);
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
     }
 }
