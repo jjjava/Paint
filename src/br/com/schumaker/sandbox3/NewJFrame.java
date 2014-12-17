@@ -18,56 +18,86 @@ public class NewJFrame extends javax.swing.JFrame {
 
         hsCanvas1 = new br.com.schumaker.sandbox3.HsCanvas();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
+        jMenuFile = new javax.swing.JMenu();
+        jMenuItemOpen = new javax.swing.JMenuItem();
+        jMenuItemSave = new javax.swing.JMenuItem();
+        jMenuItemSaveAs = new javax.swing.JMenuItem();
+        jMenuItemPrint = new javax.swing.JMenuItem();
+        jMenuItemExit = new javax.swing.JMenuItem();
+        jMenuEdit = new javax.swing.JMenu();
+        jMenuItemUndo = new javax.swing.JMenuItem();
+        jMenuItemReDo = new javax.swing.JMenuItem();
+        jMenuItemColor = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().add(hsCanvas1, java.awt.BorderLayout.CENTER);
 
-        jMenu1.setText("File");
+        jMenuFile.setText("File");
 
-        jMenuItem1.setText("Abrir");
-        jMenu1.add(jMenuItem1);
+        jMenuItemOpen.setText("Abrir");
+        jMenuFile.add(jMenuItemOpen);
 
-        jMenuItem2.setText("Salvar");
-        jMenu1.add(jMenuItem2);
+        jMenuItemSave.setText("Salvar");
+        jMenuFile.add(jMenuItemSave);
 
-        jMenuItem3.setText("Salvar como...");
-        jMenu1.add(jMenuItem3);
+        jMenuItemSaveAs.setText("Salvar como...");
+        jMenuFile.add(jMenuItemSaveAs);
 
-        jMenuItem4.setText("Imprimir");
-        jMenu1.add(jMenuItem4);
+        jMenuItemPrint.setText("Imprimir");
+        jMenuFile.add(jMenuItemPrint);
 
-        jMenuItem5.setText("Sair");
-        jMenu1.add(jMenuItem5);
+        jMenuItemExit.setText("Sair");
+        jMenuFile.add(jMenuItemExit);
 
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(jMenuFile);
 
-        jMenu2.setText("Editar");
+        jMenuEdit.setText("Editar");
 
-        jMenuItem6.setText("Desfazer");
-        jMenu2.add(jMenuItem6);
+        jMenuItemUndo.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Z, java.awt.event.InputEvent.META_MASK));
+        jMenuItemUndo.setText("Desfazer");
+        jMenuItemUndo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemUndoActionPerformed(evt);
+            }
+        });
+        jMenuEdit.add(jMenuItemUndo);
 
-        jMenuItem7.setText("Refazer");
-        jMenu2.add(jMenuItem7);
+        jMenuItemReDo.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Y, java.awt.event.InputEvent.META_MASK));
+        jMenuItemReDo.setText("Refazer");
+        jMenuItemReDo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemReDoActionPerformed(evt);
+            }
+        });
+        jMenuEdit.add(jMenuItemReDo);
 
-        jMenuItem8.setText("Cor");
-        jMenu2.add(jMenuItem8);
+        jMenuItemColor.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.META_MASK));
+        jMenuItemColor.setText("Cor");
+        jMenuItemColor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemColorActionPerformed(evt);
+            }
+        });
+        jMenuEdit.add(jMenuItemColor);
 
-        jMenuBar1.add(jMenu2);
+        jMenuBar1.add(jMenuEdit);
 
         setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItemColorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemColorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemColorActionPerformed
+
+    private void jMenuItemReDoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemReDoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemReDoActionPerformed
+
+    private void jMenuItemUndoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemUndoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemUndoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -98,16 +128,16 @@ public class NewJFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private br.com.schumaker.sandbox3.HsCanvas hsCanvas1;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JMenu jMenuEdit;
+    private javax.swing.JMenu jMenuFile;
+    private javax.swing.JMenuItem jMenuItemColor;
+    private javax.swing.JMenuItem jMenuItemExit;
+    private javax.swing.JMenuItem jMenuItemOpen;
+    private javax.swing.JMenuItem jMenuItemPrint;
+    private javax.swing.JMenuItem jMenuItemReDo;
+    private javax.swing.JMenuItem jMenuItemSave;
+    private javax.swing.JMenuItem jMenuItemSaveAs;
+    private javax.swing.JMenuItem jMenuItemUndo;
     // End of variables declaration//GEN-END:variables
 }

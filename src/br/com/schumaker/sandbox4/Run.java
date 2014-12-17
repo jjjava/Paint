@@ -11,7 +11,7 @@ public class Run {
             @Override
             public void run() {
                 laf();
-                new FrMain().setVisible(true);
+                FrMain.getInstance().setVisible(true);
             }
         });
     }

@@ -18,11 +18,17 @@ public class HsCanvas extends Canvas implements MouseMotionListener {
     private Image backbuffer;
     private Color color;
 
-    public HsCanvas() {
+    private static final HsCanvas INSTANCE = new HsCanvas();
+
+    private HsCanvas() {
         gfx = getGraphics();
         this.setBackground(Color.white);
-        this.setForeground(Color.yellow);
+        this.setForeground(Color.black);
         addMouseMotionListener(this);
+    }
+
+    public static HsCanvas getInstance() {
+        return INSTANCE;
     }
 
     public void setWH(Dimension d) {
