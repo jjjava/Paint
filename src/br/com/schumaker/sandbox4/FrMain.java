@@ -35,15 +35,15 @@ public class FrMain extends javax.swing.JFrame {
     }
 
     private void jMenuItemColorActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+       CoreFrMain.getInstance().setColor();
     }
 
     private void jMenuItemReDoActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        CoreFrMain.getInstance().controlY();
     }
 
     private void jMenuItemUndoActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        CoreFrMain.getInstance().controlZ();
     }
 
     private void initComponents() {

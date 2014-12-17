@@ -15,7 +15,7 @@ import java.awt.event.MouseMotionListener;
 public class HsCanvas extends Canvas implements MouseMotionListener {
 
     private Graphics gfx;
-    private Image backbuffer;
+    private Image backBuffer;
     private Color color;
 
     private static final HsCanvas INSTANCE = new HsCanvas();
@@ -41,8 +41,8 @@ public class HsCanvas extends Canvas implements MouseMotionListener {
         int y = me.getY();
         this.getGraphics().fillOval(x - 10, y - 10, 10, 10);
 
-        backbuffer = createImage(this.getWidth(), this.getHeight());
-        gfx = backbuffer.getGraphics();
+        setBackBuffer(createImage(this.getWidth(), this.getHeight()));
+        gfx = getBackBuffer().getGraphics();
 
         repaint();
         me.consume();
@@ -54,7 +54,7 @@ public class HsCanvas extends Canvas implements MouseMotionListener {
 
     @Override
     public void update(Graphics g) {
-        gfx.drawImage(backbuffer, 0, 0, this);
+        gfx.drawImage(getBackBuffer(), 0, 0, this);
     }
 
     @Override
@@ -68,5 +68,13 @@ public class HsCanvas extends Canvas implements MouseMotionListener {
 
     public void setColor(Color color) {
         this.color = color;
+    }
+
+    public Image getBackBuffer() {
+        return backBuffer;
+    }
+
+    public void setBackBuffer(Image backBuffer) {
+        this.backBuffer = backBuffer;
     }
 }
